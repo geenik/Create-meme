@@ -11,6 +11,20 @@ Create Meme App is an Android application that allows users to create and custom
 - View a list of saved memes with options to delete or download them.
 - Firebase user authentication with sign-up and sign-in functionality.
 
+## Architecture
+
+This project follows the MVVM (Model-View-ViewModel) architecture pattern. MVVM is a software architectural pattern that separates the user interface (View) from the data and business logic (Model), using a ViewModel as an intermediary between the two. It promotes a separation of concerns, improves testability, and allows for easier maintenance and scalability of the codebase.
+
+### Components
+
+- **Model**: Represents the data and business logic of the application. It encapsulates data retrieval, manipulation, and storage operations.
+
+- **View**: Represents the user interface of the application. It observes changes in the ViewModel and updates its display accordingly.
+
+- **ViewModel**: Acts as an intermediary between the View and the Model. It exposes data and commands that the View can bind to. It also handles the communication between the View and the Model, such as retrieving data from the Model and updating the Model based on user interactions.
+
+The MVVM architecture pattern enhances the separation of concerns, making the codebase more modular and maintainable. It also enables easier unit testing of individual components.
+
 
 ## Getting Started
 
