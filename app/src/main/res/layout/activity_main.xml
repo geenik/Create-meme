@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentview"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <com.example.create_meme.DraggableCoordinatorLayout
+        android:id="@+id/dragview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".80">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+    </com.example.create_meme.DraggableCoordinatorLayout>
+
+    <LinearLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".01"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edittext"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="enter text"
+            android:inputType="text" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/text_btn"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:background="@color/yellow"
+                android:text="Add text" />
+
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_margin="5dp">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/image_btn"
+            android:layout_width="150dp"
+            android:background="@color/yellow"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="Add Image" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/save_btn"
+            android:background="@color/yellow"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="Save image" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
